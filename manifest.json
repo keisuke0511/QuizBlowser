@@ -1,0 +1,18 @@
+{
+  "name" : "Question Generator",
+  "version" : "0.0.1",
+  "manifest_version" : 2,
+  "description" : "Let's enjoy Multiple Question!",
+  "content_scripts" : [
+    {
+      "matches" : ["<all_urls>"],
+      "css" : ["data/public/css/quizbutton.css", "data/public/css/all.css"],
+      "js": ["data/includes/jquery.min.js", "data/includes/quizgenerate.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "data/*"
+  ],
+  "content_security_policy":
+  "script-src 'self';object-src 'self'"
+}
